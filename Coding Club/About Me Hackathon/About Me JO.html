@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>About Me!</title>
+        <link rel=stylesheet type="text/css" href="aboutMePageStyling.css">
+    </head>
+    <style>
+    body{
+        background-image: url('backgroundimage.jpeg');
+        min-height: 500px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #idWeirdButton{
+        color: greenyellow;
+        background-color: darkcyan;
+        border-style: dotted double dashed double;
+        border-width: 4px;
+        border-color: mediumaquamarine;
+        display: inline;
+    }
+    </style>
+    <script>
+        function clickRedirect(){
+            window.open("About Me 2 JO.html")
+        }
+
+        function textErase(){
+            document.getElementById("idPasswordtext").value = "";
+        }
+
+        function showSummary(){
+            if (document.getElementById("idPasswordtext").value == "Coding Rules"){
+                idWeirdButton.value = "You got the password correct!";
+                idPasswordtext.value = "You got the password correct!";
+            }
+            else{
+                idPasswordtext.value = "You got the password wrong... try again, or find out more about me!";
+                idPasswordButton.value = "You got the password wrong... try again, or find out more about me!";
+            }
+        }
+    </script>
+    <body>
+        <h1>Hello, Reader!</h1>
+        <p>This is going to be a webpage about me, Jo-Yul!</p>
+        <h1 style="font-size: 50px;">Hobbies</h1>
+        <p2>My favourite hobbies are to play the violin, play video games, 
+            chat online, and most importantly, 
+            have fun with things. </p2>
+        <br><br>
+        <p id="idWeirdButton" onclick="clickRedirect()">This text is a button. Click here to be redirected to more information about me!</p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <input type="text" value="Enter the secret password!" id="idPasswordtext" onclick="textErase()">
+        <input type="button" value="Press to see if you got the password correct!" id="idPasswordButton" onclick="showSummary()">
+    </body>
+</html>
